@@ -52,5 +52,12 @@ namespace PierresOrderTracker.Models
       }
       return null;
     }
+
+    public static void EditVendor(int searchId, string newName, string newDescription)
+    {
+      Vendor vendorToEdit = FindVendor(searchId);
+      vendorToEdit.Name = newName;
+      vendorToEdit.Description = newDescription;
+    }
   }
 }
