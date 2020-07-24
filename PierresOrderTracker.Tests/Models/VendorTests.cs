@@ -71,8 +71,9 @@ namespace PierresOrderTracker.Tests
     public void GetOrders_ReturnsEmptyList_OrderList()
     {
       Vendor testVendor = new Vendor("name", "description");
-      List<Order> orderList = new List<order>{};
-      CollectionAssert.AreEqual(orderList, Vendor.Orders);
+      List<Order> orderList = new List<Order>{};
+      List<Order> testVendorOrders = testVendor.GetOrders();
+      CollectionAssert.AreEqual(orderList, testVendorOrders);
     }
 
     [TestMethod]
@@ -83,16 +84,18 @@ namespace PierresOrderTracker.Tests
       Order purchase1 = new Order();
       Order purchase2 = new Order();
       Order purchase3 = new Order();
+      List<Order> sampleOrders = new List<Order> {};
       sampleOrders.Add(purchase1);
       sampleOrders.Add(purchase2);
       sampleOrders.Add(purchase3);
-      List<Order> sampleOrders = new List<Order> {};
 
       sallysSubs.AddOrder(purchase1);
       sallysSubs.AddOrder(purchase1);
       sallysSubs.AddOrder(purchase1);
 
-      CollectionAssert.AreEqual(sampleOrders, sallysSubs.Orders);
+      List<Order> sallysOrders = sallysSubs.GetOrders();
+
+      CollectionAssert.AreEqual(sampleOrders, sallysOrders);
     }
   }
 }
