@@ -1,0 +1,21 @@
+@using PierresOrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+
+  <h2>Here is all of @Model["vendor"].Name Orders:</h2>
+  <p>@Model["vendor"].Description</p>
+  <br>
+
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/order/@order.Id'>@order.Description</a></li>
+    <br>
+  }
+
+  <p><a href='/vendors'>View All Vendors</a></p>
+  <p><a href='/vendors/new'>Add A New Vendor!</a></p>
+  <p><a href='/'>Home</a></p>
+</div>

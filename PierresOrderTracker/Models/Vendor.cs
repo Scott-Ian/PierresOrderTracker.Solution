@@ -6,7 +6,7 @@ namespace PierresOrderTracker.Models
   {
     public string Name { get; set; }
     public string Description { get; set; }
-    public int Id { get; set; }
+    public int Id { get; }
     private static int _nextId = 1; 
     private static List<Vendor> _instances = new List<Vendor> {}; 
     private List<Order> _orders = new List<Order> {}; 

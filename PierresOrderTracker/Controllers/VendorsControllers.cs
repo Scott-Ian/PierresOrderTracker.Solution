@@ -25,6 +25,17 @@ namespace PierresOrderTracker.Controllers
       Vendor newVendor = new Vendor(name, description);
       return RedirectToAction("Index");
     }
+
+    [HttpGet("/vendors/{Id}")]
+    public ActionResult Show(int Id)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor selectedVendor = Vendor.FindVendor(Id);
+      List<Order> vendorOrders = selectedVendor.GetOrders();
+      model.Add("vendor", selectedVendor);
+      model.Add("orders", vendorOrders);
+      return View(model);
+    }
     
   }
 }
