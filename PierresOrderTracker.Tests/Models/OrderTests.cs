@@ -79,5 +79,17 @@ namespace PierresOrderTracker.Tests
       CollectionAssert.AreEqual(allTestOrders, allInstancesOfOrder);
     }
 
+    [TestMethod]
+    public void FindId_FindOrderById_Order()
+    {
+      Order testOrder1 = new Order("Flour Purchase", "Flour for daily operations", 20, "January 11, 2020");
+      Order testOrder2 = new Order("Cleaning", "Deep cleaning of kitchen", 200, "January 12, 2020");
+      Order testOrder3 = new Order("Payroll", "Weekly payroll service fee", 100, "January 13, 2020");
+
+      Order pulledOrder = Order.FindVendor(3);
+
+      Assert.AreEqual(testOrder3, pulledOrder);
+    }
+
   }
 }

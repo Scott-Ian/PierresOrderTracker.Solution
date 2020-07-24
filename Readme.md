@@ -24,10 +24,10 @@ _Long description._
 |11.|Order objects include a Date of Order field upon creation |N/A|N/A|_True_  |
 |12.|Order objects include a unique Id which is assigned upon creation|N/A|N/A|_True_|
 |X.|Order objects contain a list of all instantiated order objects|N/A|N/A|_True_|
-
-|13.|The program will be able to find a Vendor object via its Id|N/A|N/A|_False_  |
+|13.|The program will be able to find a Vendor object via its Id|N/A|N/A|_True_  |
 
 |14.|The program will be able to find an Order object via its id|N/A|N/A|_False_  |
+
 |15.|The program will be able to edit a Vendor objects values|Update Vendor Name: Charles Barkley|New Name: Paul Rudd|_False_|
 |16.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_False_|
 
