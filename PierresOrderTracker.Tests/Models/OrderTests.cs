@@ -24,8 +24,17 @@ namespace PierresOrderTracker.Tests
     public void GetTitle_ReturnsTitleOfOrder_String()
     {
       string title = "Flour Purchase";
-      Order testOrder = new Order(title);
+      Order testOrder = new Order(title, "description");
       Assert.AreEqual(title, testOrder.Title);
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescriptionOfOrder_String()
+    {
+      string description = "Sugard Delivery";
+      Order testOrder = new Order("Title", description);
+
+      Assert.AreEqual(description, testOrder.Description);
     }
 
   }
