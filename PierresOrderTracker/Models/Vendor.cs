@@ -59,5 +59,11 @@ namespace PierresOrderTracker.Models
       vendorToEdit.Name = newName;
       vendorToEdit.Description = newDescription;
     }
+
+    public static void DeleteVendor(int searchId)
+    {
+      Vendor toDelete = Vendor.FindVendor(searchId);
+      _instances.Remove(toDelete);
+    }
   }
 }
