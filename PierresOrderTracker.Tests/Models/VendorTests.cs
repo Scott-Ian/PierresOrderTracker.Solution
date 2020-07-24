@@ -9,7 +9,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor testVendor = new Vendor("SampleName");
+      Vendor testVendor = new Vendor("SampleName", "sampleDescription");
       Assert.AreEqual(typeof(Vendor), testVendor.GetType());
     }
 
@@ -17,7 +17,7 @@ namespace PierresOrderTracker.Tests
     public void GetName_ReturnsName_String()
     {
       string name = "Phils Pharmaceuticals";
-      Vendor testVendor = new Vendor(name);
+      Vendor testVendor = new Vendor(name, "description");
       Assert.AreEqual(name, testVendor.Name);
     }
 
@@ -25,7 +25,7 @@ namespace PierresOrderTracker.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       string name = "Phils Pharmaceuticals";
-      string description ="Oxycodone Habit";
+      string description ="Oxycodone Dealer";
       Vendor testVendor = new Vendor(name, description);
       Assert.AreEqual(description, testVendor.Description);
     }
