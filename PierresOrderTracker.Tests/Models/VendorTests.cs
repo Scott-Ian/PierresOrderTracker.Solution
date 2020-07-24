@@ -118,7 +118,7 @@ namespace PierresOrderTracker.Tests
       Vendor testVendor = new Vendor("Sally's Subs", "Favorite Sub Place");
       string newName = "Peter's Pies";
       string newDescription = "Favorite Pie Place";
-      Vendor.EditVendor(1, "Peter's Pies", "Favorite Pie Place");
+      Vendor.EditVendor(1, newName, newDescription);
 
       Assert.AreEqual(newName, testVendor.Name);
       Assert.AreEqual(newDescription, testVendor.Description);

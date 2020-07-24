@@ -91,5 +91,22 @@ namespace PierresOrderTracker.Tests
       Assert.AreEqual(testOrder3, pulledOrder);
     }
 
+    [TestMethod]
+    public void EditOrder_UpdatesValuesOfOrderObject_Order()
+    {
+      Order testOrder= new Order("Flour Purchase", "Flour for daily operations", 20, "January 11, 2020");
+      string newTitle = "Sugar Purchase";
+      string newDescription = "For weeks batch of doughnuts";
+      int newPrice = 10;
+      string newDate = "July 24, 2020";
+
+      Order.EditOrder(1, newTitle, newDescription, newPrice, newDate);
+
+      Assert.AreEqual(newTitle, testOrder.Title);
+      Assert.AreEqual(newDescription, testOrder.Description);
+      Assert.AreEqual(newPrice, testOrder.Price);
+      Assert.AreEqual(newDate, testOrder.Date);
+    }
+
   }
 }
