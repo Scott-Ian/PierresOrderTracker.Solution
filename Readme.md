@@ -21,8 +21,8 @@ _Long description._
 |8.|Order objects are instantiated with a Title|N/A|N/A|_True_  |
 |9.|Order objects are created with a Description property |N/A|N/A|_True_  |
 |10.|Order objects contain a Price field upon creation |N/A|N/A|_True_  |
+|11.|Order objects include a Date of Order field upon creation |N/A|N/A|_True_  |
 
-|11.|Order objects include a Date of Order field upon creation |N/A|N/A|_False_  |
 |12.|Order objects include a unique Id which is assigned upon creation|N/A|N/A|_False_|
 
 |13.|The program will be able to find a Vendor object via its Id|N/A|N/A|_False_  |

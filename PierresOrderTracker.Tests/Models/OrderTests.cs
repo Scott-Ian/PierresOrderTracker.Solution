@@ -53,5 +53,14 @@ namespace PierresOrderTracker.Tests
       Order testOrder = new Order("Title", "Description", 200, date);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsUniqueId_Int()
+    {
+      Order testOrder1 = new Order("Title", "Description", 200, "January 11, 2020");
+      Order testOrder2 = new Order("Title", "Description", 200, "January 12, 2020");
+
+      Assert.AreNotEqual(testOrder1.Id, testOrder2.Id);
+    }
+
   }
 }
