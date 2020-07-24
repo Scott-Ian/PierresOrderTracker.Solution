@@ -65,5 +65,12 @@ namespace PierresOrderTracker.Models
       Vendor toDelete = Vendor.FindVendor(searchId);
       _instances.Remove(toDelete);
     }
+
+    public void RemoveOrder(int searchId)
+    {
+      Order toRemove = Order.FindOrder(searchId);
+      _orders.Remove(toRemove);
+      Order.DeleteOrder(searchId);
+    }
   }
 }

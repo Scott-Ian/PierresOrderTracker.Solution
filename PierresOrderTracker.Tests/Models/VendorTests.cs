@@ -11,7 +11,7 @@ namespace PierresOrderTracker.Tests
     public void Dispose()
     {
       Vendor.ClearAllVendors();
-      Order.ClearAllOrders()
+      Order.ClearAllOrders();
     }
 
     [TestMethod]
