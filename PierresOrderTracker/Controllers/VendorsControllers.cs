@@ -6,11 +6,11 @@ namespace PierresOrderTracker.Controllers
 {
   public class VendorsController : Controller
   {
-    [HttpGet("/categories")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendors> allVendors = Vendor.GetAllVendors();
-      return View(allCategories);
+      List<Vendor> allVendors = Vendor.GetAllVendors();
+      return View(allVendors);
     }
     
   }
