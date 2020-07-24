@@ -16,7 +16,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order testOrder = new Order("Title");
+      Order testOrder = new Order("Title", "Description");
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
 
