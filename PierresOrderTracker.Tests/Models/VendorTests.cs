@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresOrderTracker.Models;
+using System;
 using System.Collections.Generic;
 
 namespace PierresOrderTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAllVendors();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -44,7 +50,7 @@ namespace PierresOrderTracker.Tests
     public void GetAllVendors_ReturnsEmptyList_VendorList()
     {
       List<Vendor> vendorList = new List<Vendor>{};
-      CollectionAssert.AreEqual(vendorList, Vendor.AllVendors);
+      CollectionAssert.AreEqual(vendorList, Vendor.GetAllVendors());
     }
 
     [TestMethod]
@@ -58,7 +64,7 @@ namespace PierresOrderTracker.Tests
       vendorList.Add(testVendor2);
       vendorList.Add(testVendor3);
 
-      CollectionAssert.AreEqual(vendorList, Vendor.AllVendors);
+      CollectionAssert.AreEqual(vendorList, Vendor.GetAllVendors());
     }
   }
 }
