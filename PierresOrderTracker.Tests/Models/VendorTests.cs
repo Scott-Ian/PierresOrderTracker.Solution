@@ -111,5 +111,17 @@ namespace PierresOrderTracker.Tests
 
       Assert.AreEqual(philsPharmaceuticals, pulledVendor);
     }
+
+    [TestMethod]
+    public void EditVendor_UpdatesValuesOfVendorObject_Vendor()
+    {
+      Vendor testVendor = new Vendor("Sally's Subs", "Favorite Sub Place");
+      string newName = "Peter's Pies";
+      string newDescription = "Favorite Pie Place";
+      Vendor.EditVendor(1, "Peter's Pies", "Favorite Pie Place");
+
+      Assert.AreEqual(newName, testVendor.Name);
+      Assert.AreEqual(newDescription, testVendor.Description);
+    }
   }
 }
