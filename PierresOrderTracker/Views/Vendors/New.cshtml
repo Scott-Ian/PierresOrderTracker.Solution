@@ -1,0 +1,20 @@
+@using PierresOrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Let's Add a New Vendor!</h1>
+
+  <form action="/vendor" method ="post">
+    <label for="name">Vendor Name</label>
+    <input id="name" name="name" type="text" required>
+    <label for="description">Vendor Description</label>
+    <input id="description" name="description" type="text" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <p><a href='/vendors'>View All Vendors</a></p>
+  <p><a href='/'>Home</a></p>
+
+</div>
