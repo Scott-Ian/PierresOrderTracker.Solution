@@ -108,5 +108,21 @@ namespace PierresOrderTracker.Tests
       Assert.AreEqual(newDate, testOrder.Date);
     }
 
+    [TestMethod]
+    public void DeleteOrder_RemovesOrderFromList_Null()
+    {
+      Order testOrder1 = new Order("Flour Purchase", "Flour for daily operations", 20, "January 11, 2020");
+      Order testOrder2 = new Order("Cleaning", "Deep cleaning of kitchen", 200, "January 12, 2020");
+      Order testOrder3 = new Order("Payroll", "Weekly payroll service fee", 100, "January 13, 2020");
+
+      Order.DelteOrder(3);
+
+      List<Order> expectedOrders = new List <Order> {};
+      expectedOrders.Add(testOrder1);
+      expectedOrders.Add(testOrder2);
+
+      CollectionAssert.AreEqual(expectedOrders, Order.GetAllOrders());
+    }
+
   }
 }

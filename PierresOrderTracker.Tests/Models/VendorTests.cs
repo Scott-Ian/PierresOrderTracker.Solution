@@ -125,7 +125,7 @@ namespace PierresOrderTracker.Tests
     }
 
     [TestMethod]
-    public void DeleteOrder_RemovesVendorFromList_Null()
+    public void DeleteVendor_RemovesVendorFromList_Null()
     {
       Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
       Vendor philsPharmaceuticals = new Vendor("Phils Pharmaceuticals", "Oxycodone Dealer");
@@ -138,6 +138,6 @@ namespace PierresOrderTracker.Tests
 
       CollectionAssert.AreEqual(expectedList, Vendor.GetAllVendors());
     }
-    
+
   }
 }
