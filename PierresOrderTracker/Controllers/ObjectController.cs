@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using PierresOrderTracker.Models;
 using System.Collections.Generic;
 
-namespace ProjectName.Controllers
+namespace PierresOrderTracker.Controllers
 {
   public class ObjectPlural_Controller : Controller
   {

@@ -1,6 +1,6 @@
-# _PROJECT NAME_
+# _Pierres Order Tracker_
 
-#### _SHORT DESCRIPTION_
+#### _A web application for listing, adding, and removing clients and their orders from lists_
 
 #### By _**Ian Scott**_
 
@@ -30,11 +30,11 @@ _Long description._
 
 ## Known Bugs
 
-_ _
+_There are currently no known bugs._
 
 ## Support and contact details
 
-_Contact me at...._
+_If you would like to contribute to this project, report any bugs/issues, or just to chat because Ian is a really cool dude, please reach out to Ian's email at: chesnekov@gmail.com_
 
 ## Technologies Used
 
