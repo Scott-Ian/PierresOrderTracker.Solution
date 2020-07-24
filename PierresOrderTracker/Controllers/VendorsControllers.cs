@@ -12,6 +12,12 @@ namespace PierresOrderTracker.Controllers
       List<Vendor> allVendors = Vendor.GetAllVendors();
       return View(allVendors);
     }
+
+    [HttpGet("/vendors/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
     
   }
 }
