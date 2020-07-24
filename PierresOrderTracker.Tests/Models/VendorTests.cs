@@ -100,5 +100,16 @@ namespace PierresOrderTracker.Tests
 
       CollectionAssert.AreEqual(sampleOrders, sallysOrders);
     }
+
+    [TestMethod]
+    public void FindId_FindVendorById_Vendor()
+    {
+      Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
+      Vendor philsPharmaceuticals = new Vendor("Phils Pharmaceuticals", "Oxycodone Dealer");
+
+      Vendor pulledVendor = Vendor.FindVendor(2);
+
+      Assert.AreEqual(philsPharmaceuticals, pulledVendor);
+    }
   }
 }
