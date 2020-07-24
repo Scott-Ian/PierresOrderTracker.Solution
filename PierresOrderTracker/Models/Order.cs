@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PierresOrderTracker.Models
 {
@@ -10,6 +11,7 @@ namespace PierresOrderTracker.Models
     public string Date { get; set; }
     public int Id { get; }
     private static int _nextId = 1;
+    private static List<Order> _instances = new List<Order> {};
     public Order (string title, string description, int price, string date)
     {
       Title = title;
@@ -18,7 +20,17 @@ namespace PierresOrderTracker.Models
       Date = date;
       Id = _nextId;
       _nextId ++;
+      _instances.Add(this);
+    }
 
+    public static List<Order> GetAllOrders()
+    {
+      return _instances;
+    }
+
+    public static void ClearAllOrders()
+    {
+      _instances.Clear();
     }
   }
 }

@@ -6,12 +6,12 @@ using System.Collections.Generic;
 namespace PierresOrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests //: IDisposable
+  public class OrderTests : IDisposable
   {
-    // public void Dispose()
-    // {
-
-    // }
+    public void Dispose()
+    {
+      Order.ClearAllOrders();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
@@ -76,7 +76,7 @@ namespace PierresOrderTracker.Tests
 
       List <Order> allInstancesOfOrder = Order.GetAllOrders();
 
-      Collections.Assert(allTestOrders, allInstancesOfOrder);
+      CollectionAssert.AreEqual(allTestOrders, allInstancesOfOrder);
     }
 
   }
