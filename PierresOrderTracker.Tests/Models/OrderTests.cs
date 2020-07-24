@@ -16,7 +16,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order testOrder = new Order("Title", "Description");
+      Order testOrder = new Order("Title", "Description", 5);
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
 
@@ -24,7 +24,7 @@ namespace PierresOrderTracker.Tests
     public void GetTitle_ReturnsTitleOfOrder_String()
     {
       string title = "Flour Purchase";
-      Order testOrder = new Order(title, "description");
+      Order testOrder = new Order(title, "description", 5);
       Assert.AreEqual(title, testOrder.Title);
     }
 
@@ -32,7 +32,7 @@ namespace PierresOrderTracker.Tests
     public void GetDescription_ReturnsDescriptionOfOrder_String()
     {
       string description = "Sugard Delivery";
-      Order testOrder = new Order("Title", description);
+      Order testOrder = new Order("Title", description, 5);
 
       Assert.AreEqual(description, testOrder.Description);
     }

@@ -81,9 +81,9 @@ namespace PierresOrderTracker.Tests
     {
       Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
 
-      Order purchase1 = new Order("Title", "Description");
-      Order purchase2 = new Order("Title", "Description");
-      Order purchase3 = new Order("Title", "Description");
+      Order purchase1 = new Order("Title", "Description", 5);
+      Order purchase2 = new Order("Title", "Description", 10);
+      Order purchase3 = new Order("Title", "Description", 15);
       List<Order> sampleOrders = new List<Order> {};
       sampleOrders.Add(purchase1);
       sampleOrders.Add(purchase2);
