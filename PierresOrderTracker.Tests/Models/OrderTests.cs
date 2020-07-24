@@ -62,5 +62,22 @@ namespace PierresOrderTracker.Tests
       Assert.AreNotEqual(testOrder1.Id, testOrder2.Id);
     }
 
+    [TestMethod]
+    public void GetAllOrders_ReturnsAllInstancesOfOrder_ListOfOrders()
+    {
+      Order testOrder1 = new Order("Flour Purchase", "Flour for daily operations", 20, "January 11, 2020");
+      Order testOrder2 = new Order("Cleaning", "Deep cleaning of kitchen", 200, "January 12, 2020");
+      Order testOrder3 = new Order("Payroll", "Weekly payroll service fee", 100, "January 13, 2020");
+
+      List <Order> allTestOrders = new List <Order> {};
+      allTestOrders.Add(testOrder1);
+      allTestOrders.Add(testOrder2);
+      allTestOrders.Add(testOrder3);
+
+      List <Order> allInstancesOfOrder = Order.GetAllOrders();
+
+      Collections.Assert(allTestOrders, allInstancesOfOrder);
+    }
+
   }
 }
