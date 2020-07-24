@@ -45,5 +45,16 @@ namespace PierresOrderTracker.Models
       }
       return null;
     }
+
+    public static void EditOrder(int searchId, string newTitle, string newDescription, int newPrice, string newDate)
+    {
+      Order orderToEdit = FindOrder(searchId);
+      orderToEdit.Title = newTitle;
+      orderToEdit.Description = newDescription;
+      orderToEdit.Price = newPrice;
+      orderToEdit.Date = newDate;
+    }
+
+
   }
 }
