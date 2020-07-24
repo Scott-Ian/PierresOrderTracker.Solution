@@ -66,5 +66,33 @@ namespace PierresOrderTracker.Tests
 
       CollectionAssert.AreEqual(vendorList, Vendor.GetAllVendors());
     }
+
+    [TestMethod]
+    public void GetOrders_ReturnsEmptyList_OrderList()
+    {
+      Vendor testVendor = new Vendor("name", "description");
+      List<Order> orderList = new List<order>{};
+      CollectionAssert.AreEqual(orderList, Vendor.Orders);
+    }
+
+    [TestMethod]
+    public void GetOrders_ReturnsEveryOrderOfVendor_ListOfVendors()
+    {
+      Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
+
+      Order purchase1 = new Order();
+      Order purchase2 = new Order();
+      Order purchase3 = new Order();
+      sampleOrders.Add(purchase1);
+      sampleOrders.Add(purchase2);
+      sampleOrders.Add(purchase3);
+      List<Order> sampleOrders = new List<Order> {};
+
+      sallysSubs.AddOrder(purchase1);
+      sallysSubs.AddOrder(purchase1);
+      sallysSubs.AddOrder(purchase1);
+
+      CollectionAssert.AreEqual(sampleOrders, sallysSubs.Orders);
+    }
   }
 }

@@ -16,9 +16,10 @@ _Long description._
 |3.|Vendor objects have a Description property assigned upon creation|N/A|N/A|_True_|
 |4.|Vendor objects have a unique Id assigned upon creation|N/A|N/A|_True_  |
 |5.|The program maintains a list of all instances of Vendor objects|N/A|N/A|_True_  |
+|6.|The program can instantiate an Order object of type Order|N/A|N/A|_True_  |
 
-|6.|The program can instantiate an Order object of type Order|N/A|N/A|_False_  |
 |7.|Vendor objects contain a list of all orders associated with the vendor|N/A|N/A|_False_  |
+
 |8.|Order objects are instantiated with a Title|N/A|N/A|_False_  |
 |9.|Order objects are created with a Description property |N/A|N/A|_False_  |
 |10.|Order objects contain a Price field upon creation |N/A|N/A|_False_  |
