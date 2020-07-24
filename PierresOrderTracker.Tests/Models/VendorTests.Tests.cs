@@ -6,6 +6,11 @@ namespace PierresOrderTracker.Tests
   [TestClass]
   public class VendorTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor testVendor = new Vendor();
+      Assert.AreEqual(typeof(Vendor), testVendor.GetType());
+    }
   }
 }

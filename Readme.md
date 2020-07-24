@@ -34,7 +34,7 @@ _Long description._
 
 |19.|The program will also include an extension of the Vendor class, which will be a Client class, and contain all aspects of the Vendor class|N/A|N/A|_False_  |
 |20.|The program will display a list of clients each of which will have an order history|N/A|N/A|_False_  |
-|3.|The main splash page will present a total expenditures vs incoming funds|N/A|N/A|_False_  |
+|21.|The main splash page will present a total expenditures vs incoming funds|N/A|N/A|_False_  |
 
 |3.|  |N/A|N/A|_False_  |
 
