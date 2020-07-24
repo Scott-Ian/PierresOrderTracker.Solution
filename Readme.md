@@ -27,8 +27,7 @@ _Long description._
 |13.|The program will be able to find a Vendor object via its Id|N/A|N/A|_True_  |
 |14.|The program will be able to find an Order object via its id|N/A|N/A|_True_  |
 |15.|The program will be able to edit a Vendor objects values|Update Vendor Name: Charles Barkley|New Name: Paul Rudd|_True_|
-
-|16.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_False_|
+|16.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_True_|
 
 |17.|The program will be able to delete Vendor objects|Delete Vendor: Alex Trebeck|Alex Trebeck Deleted|_False_|
 |18.|The program will be able to delete Order objects|Delete Order|Order Deleted|_False_  |

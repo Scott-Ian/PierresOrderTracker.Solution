@@ -123,5 +123,21 @@ namespace PierresOrderTracker.Tests
       Assert.AreEqual(newName, testVendor.Name);
       Assert.AreEqual(newDescription, testVendor.Description);
     }
+
+    [TestMethod]
+    public void DeleteOrder_RemovesVendorFromList_Null()
+    {
+      Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
+      Vendor philsPharmaceuticals = new Vendor("Phils Pharmaceuticals", "Oxycodone Dealer");
+      Vendor sliceAndDice = new Vendor ("Slice And Dice", "Knife Supplier");
+      
+      Vendor.DeleteVendor(2);
+      List<Vendor> expectedList = new List<Vendor>{};
+      expectedList.Add(sallysSubs);
+      expectedList.Add(sliceAndDice);
+
+      CollectionAssert.AreEqual(expectedList, Vendor.GetAllVendors());
+    }
+    
   }
 }
