@@ -11,6 +11,7 @@ namespace PierresOrderTracker.Tests
     public void Dispose()
     {
       Vendor.ClearAllVendors();
+      Order.ClearAllOrders()
     }
 
     [TestMethod]
@@ -89,14 +90,11 @@ namespace PierresOrderTracker.Tests
       sampleOrders.Add(purchase2);
       sampleOrders.Add(purchase3);
 
-      Console.WriteLine(sampleOrders);
-
       sallysSubs.AddOrder(purchase1);
       sallysSubs.AddOrder(purchase2);
       sallysSubs.AddOrder(purchase3);
 
       List<Order> sallysOrders = sallysSubs.GetOrders();
-      Console.WriteLine(sallysOrders);
 
       CollectionAssert.AreEqual(sampleOrders, sallysOrders);
     }
@@ -137,6 +135,31 @@ namespace PierresOrderTracker.Tests
       expectedList.Add(sliceAndDice);
 
       CollectionAssert.AreEqual(expectedList, Vendor.GetAllVendors());
+    }
+
+    [TestMethod]
+    public void RemoveOrder_RemovesOrderFromVendor_Null()
+    {
+      Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
+
+      Order purchase1 = new Order("Title", "Description", 5, "July 24");
+      Order purchase2 = new Order("Title", "Description", 10, "January 12, 2020");
+      Order purchase3 = new Order("Title", "Description", 15, "September 19 1992");
+
+      sallysSubs.AddOrder(purchase1);
+      sallysSubs.AddOrder(purchase2);
+      sallysSubs.AddOrder(purchase3);
+
+      List<Order> sampleOrders = new List<Order> {};
+      sampleOrders.Add(purchase1);
+      sampleOrders.Add(purchase2);
+
+
+      List<Order> sallysOrders = sallysSubs.GetOrders();
+
+      sallysSubs.RemoveOrder(3);
+
+      CollectionAssert.AreEqual(sampleOrders, sallysOrders);
     }
 
   }
