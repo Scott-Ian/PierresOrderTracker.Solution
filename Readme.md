@@ -11,7 +11,8 @@ _Long description._
 ### Specifications
 | | Spec | Input | Output | isComplete |
 | :-------------     | :-------------     | :------------- | :------------- |:------------- |
-|1.|The program can instantiate a Vendor object of type Vendor|N/A|N/A| _False_ |
+|1.|The program can instantiate a Vendor object of type Vendor|N/A|N/A| _True_ |
+
 |2.|Vendor objects have a Name property assigned upon creation|N/A|N/A|_False_  |
 |3.|Vendor objects have a Description property assigned upon creation|N/A|N/A|_False_  |
 |4.|Vendor objects have a unique Id assigned upon creation|N/A|N/A|_False_  |
