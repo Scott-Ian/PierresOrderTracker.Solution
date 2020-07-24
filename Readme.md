@@ -30,8 +30,7 @@ _Long description._
 |16.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_True_|
 |17.|The program will be able to delete Vendor objects|Delete Vendor: Alex Trebeck|Alex Trebeck Deleted|_True_|
 |18.|The program will be able to delete Order objects|Delete Order|Order Deleted|_True_  |
-
-|X.|The program can remove an Order from a Vendor list  |N/A|N/A|_False_  |
+|X.|The program can remove an Order from a Vendor list  |N/A|N/A|_True_  |
 
 |19.|The program will also include an extension of the Vendor class, which will be a Client class, and contain all aspects of the Vendor class|N/A|N/A|_False_  |
 |20.|The program will display a list of clients each of which will have an order history|N/A|N/A|_False_  |

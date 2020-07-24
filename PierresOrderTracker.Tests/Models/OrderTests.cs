@@ -123,6 +123,5 @@ namespace PierresOrderTracker.Tests
 
       CollectionAssert.AreEqual(expectedOrders, Order.GetAllOrders());
     }
-
   }
 }
