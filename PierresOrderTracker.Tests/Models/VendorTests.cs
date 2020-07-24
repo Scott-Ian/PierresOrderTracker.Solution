@@ -89,11 +89,14 @@ namespace PierresOrderTracker.Tests
       sampleOrders.Add(purchase2);
       sampleOrders.Add(purchase3);
 
+      Console.WriteLine(sampleOrders);
+
       sallysSubs.AddOrder(purchase1);
-      sallysSubs.AddOrder(purchase1);
-      sallysSubs.AddOrder(purchase1);
+      sallysSubs.AddOrder(purchase2);
+      sallysSubs.AddOrder(purchase3);
 
       List<Order> sallysOrders = sallysSubs.GetOrders();
+      Console.WriteLine(sallysOrders);
 
       CollectionAssert.AreEqual(sampleOrders, sallysOrders);
     }
