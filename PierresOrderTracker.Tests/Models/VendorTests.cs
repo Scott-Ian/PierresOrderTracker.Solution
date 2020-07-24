@@ -20,5 +20,14 @@ namespace PierresOrderTracker.Tests
       Vendor testVendor = new Vendor(name);
       Assert.AreEqual(name, testVendor.Name);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "Phils Pharmaceuticals";
+      string description ="Oxycodone Habit";
+      Vendor testVendor = new Vendor(name, description);
+      Assert.AreEqual(description, testVendor.Description);
+    }
   }
 }
