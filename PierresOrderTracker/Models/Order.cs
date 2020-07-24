@@ -55,6 +55,12 @@ namespace PierresOrderTracker.Models
       orderToEdit.Date = newDate;
     }
 
+    public static void DeleteOrder(int searchId)
+    {
+      Order toDelete = Order.FindOrder(searchId);
+      _instances.Remove(toDelete);
+    }
+
 
   }
 }
