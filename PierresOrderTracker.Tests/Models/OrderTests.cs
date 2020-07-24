@@ -86,7 +86,7 @@ namespace PierresOrderTracker.Tests
       Order testOrder2 = new Order("Cleaning", "Deep cleaning of kitchen", 200, "January 12, 2020");
       Order testOrder3 = new Order("Payroll", "Weekly payroll service fee", 100, "January 13, 2020");
 
-      Order pulledOrder = Order.FindVendor(3);
+      Order pulledOrder = Order.FindOrder(3);
 
       Assert.AreEqual(testOrder3, pulledOrder);
     }

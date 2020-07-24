@@ -31,6 +31,19 @@ namespace PierresOrderTracker.Models
     public static void ClearAllOrders()
     {
       _instances.Clear();
+      _nextId = 1;
+    }
+
+    public static Order FindOrder(int searchId)
+    {
+      for (int i = 0; i < _instances.Count; i++)
+      {
+        if(_instances[i].Id == searchId)
+        {
+          return _instances[i];
+        }
+      }
+      return null;
     }
   }
 }
