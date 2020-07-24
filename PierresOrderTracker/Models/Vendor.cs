@@ -28,6 +28,7 @@ namespace PierresOrderTracker.Models
     public static void ClearAllVendors()
     {
       _instances.Clear();
+      _nextId = 1;
     }
 
     public List<Order> GetOrders ()
@@ -38,6 +39,18 @@ namespace PierresOrderTracker.Models
     public void AddOrder(Order order)
     {
       _orders.Add(order);
+    }
+
+    public static Vendor FindVendor(int searchId)
+    {
+      for (int i = 0; i < _instances.Count; i++)
+      {
+        if(_instances[i].Id == searchId)
+        {
+          return _instances[i];
+        }
+      }
+      return null;
     }
   }
 }
