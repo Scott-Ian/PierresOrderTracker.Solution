@@ -29,5 +29,14 @@ namespace PierresOrderTracker.Tests
       Vendor testVendor = new Vendor(name, description);
       Assert.AreEqual(description, testVendor.Description);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsUniqueId_Int()
+    {
+      Vendor testVendor1 = new Vendor("name", "description");
+      Vendor testVendor2 = new Vendor("name2", "description2");
+
+      Assert.AreNotEqual(testVendor1.Id, testVendor2.Id);
+    }
   }
 }
