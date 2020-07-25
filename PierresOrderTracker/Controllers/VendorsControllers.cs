@@ -36,6 +36,12 @@ namespace PierresOrderTracker.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
+
+    [HttpGet("/vendors/{Id}/edit")]
+    public ActionResult Edit(int id)
+    {
+      return View(Vendor.FindVendor(id));
+    }
     
   }
 }
