@@ -42,6 +42,14 @@ namespace PierresOrderTracker.Controllers
     {
       return View(Vendor.FindVendor(id));
     }
+
+    [HttpPost("/vendors/{Id}/")]
+    public ActionResult Update (string id, string name, string description)
+    {
+      int intId = int.Parse(id);
+      Vendor.EditVendor(intId, name, description);
+      return RedirectToAction("Index");
+    }
     
   }
 }
