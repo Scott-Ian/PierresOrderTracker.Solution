@@ -1,0 +1,18 @@
+@using PierresOrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h2>@Model["vendor"].Name Placed The following Order:</h2>
+
+  <p>Order Title: @Model["order"].Title</p>
+  <p>Order Description: @Model["order"].Description</p>
+  <p>Order Price: $@Model["order"].Price</p>
+  <p>Order Date: @Model["order"].Date</p>
+
+  <p><a href='/vendors'>View All Vendors</a></p>
+  <p><a href='/vendors/new'>Add A New Vendor!</a></p>
+  <p><a href='/'>Home</a></p>
+
+</div>
