@@ -1,0 +1,26 @@
+@using PierresOrderTracker.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Let's Add a New Order to the Vendor: @Model.Name!</h1>
+
+  <form action="/vendors/@Model.Id/orders" method ="post">
+    <label for="title">Order Title</label>
+    <input id="title" name="title" type="text" required>
+    <label for="description">Order Description</label>
+    <input id="description" name="description" type="text" required>
+    <label for="price">Order Price</label>
+    <input id="price" name="price" type="number" required>
+    <label for="date">Order Date</label>
+    <input id="date" name="date" type="string" required>
+    <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <p><a href='/vendors/@Model.Id'>View Parent Vendor: @Model.Name</a></p>
+  <p><a href='/vendors'>View All Vendors</a></p>
+  <p><a href='/'>Home</a></p>
+
+</div>

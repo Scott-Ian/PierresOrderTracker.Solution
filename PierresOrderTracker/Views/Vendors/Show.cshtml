@@ -10,11 +10,21 @@
   <br>
   <a href="/vendors/@Model["vendor"].Id/edit">Edit This Vendor!</a>
   <br>
-  @foreach (Order order in @Model["orders"])
+
+  @if(@Model["orders"].Count == 0)
   {
-    <li><a href='/vendors/@Model["vendor"].Id/order/@order.Id'>@order.Description</a></li>
-    <br>
+    <h3>Oops Pierre, you haven't entered any Orders for this Vendor yet!</h3>
+    <h3><a href='/vendors/@Model["vendor"].Id/orders/new'>Would you like to add a new Order?</a></h3>
   }
+  else
+  {
+    @foreach (Order order in @Model["orders"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/order/@order.Id'>@order.Description</a></li>
+      <br>
+    }
+  }
+  
   <form action="/vendors/@Model["vendor"].Id/destroy" method ="post">
     <input id="id" name = "id" type = "hidden" value="@Model["vendor"].Id">
     <button class="btn btn-alert" type="submit">Delete This Vendor!</button>

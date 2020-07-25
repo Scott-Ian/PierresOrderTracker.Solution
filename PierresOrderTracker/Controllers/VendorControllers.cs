@@ -58,6 +58,23 @@ namespace PierresOrderTracker.Controllers
       Vendor.DeleteVendor(intId);
       return RedirectToAction("Index");
     }
+
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(string title, string description, string price, string date, string vendorId)
+    {
+      int intVendorId = int.Parse(vendorId);
+      int intPrice = int.Parse(price);
+      Order newOrder = new Order(title, description, intPrice, date);
+      Vendor selectedVendor = Vendor.FindVendor(intVendorId);
+      selectedVendor.AddOrder(newOrder);
+
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      List<Order> vendorOrders = selectedVendor.GetOrders();
+      model.Add("vendor", selectedVendor);
+      model.Add("orders", vendorOrders);
+      
+      return RedirectToAction("Show", model);
+    }
     
   }
 }
