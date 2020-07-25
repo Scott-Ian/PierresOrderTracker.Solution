@@ -32,8 +32,8 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
-      string name = "Phils Pharmaceuticals";
-      string description ="Oxycodone Dealer";
+      string name = "Phils Fishes";
+      string description ="Fish Sauce Provider";
       Vendor testVendor = new Vendor(name, description);
       Assert.AreEqual(description, testVendor.Description);
     }
@@ -103,11 +103,11 @@ namespace PierresOrderTracker.Tests
     public void FindId_FindVendorById_Vendor()
     {
       Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
-      Vendor philsPharmaceuticals = new Vendor("Phils Pharmaceuticals", "Oxycodone Dealer");
+      Vendor philsFishes = new Vendor("Phils Fishes", "Fish sauce supplier");
 
       Vendor pulledVendor = Vendor.FindVendor(2);
 
-      Assert.AreEqual(philsPharmaceuticals, pulledVendor);
+      Assert.AreEqual(philsFishes, pulledVendor);
     }
 
     [TestMethod]
@@ -126,7 +126,7 @@ namespace PierresOrderTracker.Tests
     public void DeleteVendor_RemovesVendorFromList_Null()
     {
       Vendor sallysSubs = new Vendor("Sally's Subs", "Favorite Sub Place");
-      Vendor philsPharmaceuticals = new Vendor("Phils Pharmaceuticals", "Oxycodone Dealer");
+      Vendor philsFishes = new Vendor("Phils Fishes", "Fish Sauce Supplier");
       Vendor sliceAndDice = new Vendor ("Slice And Dice", "Knife Supplier");
       
       Vendor.DeleteVendor(2);

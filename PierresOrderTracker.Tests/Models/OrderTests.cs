@@ -31,7 +31,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void GetDescription_ReturnsDescriptionOfOrder_String()
     {
-      string description = "Sugard Delivery";
+      string description = "Sugar Delivery";
       Order testOrder = new Order("Title", description, 5, "date");
 
       Assert.AreEqual(description, testOrder.Description);
