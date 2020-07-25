@@ -15,6 +15,13 @@
     <li><a href='/vendors/@Model["vendor"].Id/order/@order.Id'>@order.Description</a></li>
     <br>
   }
+  <form action="/vendors/@Model["vendor"].Id/destroy" method ="post">
+    <input id="id" name = "id" type = "hidden" value="@Model["vendor"].Id">
+    <button class="btn btn-alert" type="submit">Delete This Vendor!</button>
+  </form>
+
+  <br>
+  <br>
 
   <p><a href='/vendors'>View All Vendors</a></p>
   <p><a href='/vendors/new'>Add A New Vendor!</a></p>

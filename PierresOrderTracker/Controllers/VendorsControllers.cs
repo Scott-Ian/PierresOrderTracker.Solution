@@ -50,6 +50,14 @@ namespace PierresOrderTracker.Controllers
       Vendor.EditVendor(intId, name, description);
       return RedirectToAction("Index");
     }
+
+    [HttpPost("/vendors/{Id}/destroy")]
+    public ActionResult Destroy(string id)
+    {
+      int intId = int.Parse(id);
+      Vendor.DeleteVendor(intId);
+      return RedirectToAction("Index");
+    }
     
   }
 }
