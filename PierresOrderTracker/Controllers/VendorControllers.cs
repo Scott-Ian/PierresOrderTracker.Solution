@@ -29,7 +29,7 @@ namespace PierresOrderTracker.Controllers
     [HttpGet("/vendors/{Id}")]
     public ActionResult Show(int Id)
     {
-      Dictionary<string, object> model = new Dictionary<string, object>();
+      Dictionary<string, object> model = new Dictionary<string, object>(){};
       Vendor selectedVendor = Vendor.FindVendor(Id);
       List<Order> vendorOrders = selectedVendor.GetOrders();
       model.Add("vendor", selectedVendor);
@@ -68,7 +68,7 @@ namespace PierresOrderTracker.Controllers
       Vendor selectedVendor = Vendor.FindVendor(intVendorId);
       selectedVendor.AddOrder(newOrder);
 
-      Dictionary<string, object> model = new Dictionary<string, object>();
+      Dictionary<string, object> model = new Dictionary<string, object>(){};
       List<Order> vendorOrders = selectedVendor.GetOrders();
       model.Add("vendor", selectedVendor);
       model.Add("orders", vendorOrders);

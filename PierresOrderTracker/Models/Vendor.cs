@@ -41,6 +41,7 @@ namespace PierresOrderTracker.Models
       _orders.Add(order);
     }
 
+    // Will return the latest Vendor if no vendor is found!
     public static Vendor FindVendor(int searchId)
     {
       for (int i = 0; i < _instances.Count; i++)
@@ -50,7 +51,7 @@ namespace PierresOrderTracker.Models
           return _instances[i];
         }
       }
-      return null;
+      return _instances[_instances.Count -1];
     }
 
     public static void EditVendor(int searchId, string newName, string newDescription)
