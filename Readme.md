@@ -6,7 +6,7 @@
 
 ## Description
 
-_Long description._
+_This is a sample web application that manages vendors and order purchases for venders. It provides a list of all vendors, the ability to add, edit, and delete vendors, as well as the ability to add orders to a vendor._
 
 ### Specifications
 | | Spec | Input | Output | isComplete |
@@ -23,29 +23,17 @@ _Long description._
 |10.|Order objects contain a Price field upon creation |N/A|N/A|_True_  |
 |11.|Order objects include a Date of Order field upon creation |N/A|N/A|_True_  |
 |12.|Order objects include a unique Id which is assigned upon creation|N/A|N/A|_True_|
-|X.|Order objects contain a list of all instantiated order objects|N/A|N/A|_True_|
-|13.|The program will be able to find a Vendor object via its Id|N/A|N/A|_True_  |
-|14.|The program will be able to find an Order object via its id|N/A|N/A|_True_  |
-|15.|The program will be able to edit a Vendor objects values|Update Vendor Name: Charles Barkley|New Name: Paul Rudd|_True_|
-|16.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_True_|
-|17.|The program will be able to delete Vendor objects|Delete Vendor: Alex Trebeck|Alex Trebeck Deleted|_True_|
-|18.|The program will be able to delete Order objects|Delete Order|Order Deleted|_True_  |
-|X.|The program can remove an Order from a Vendor list  |N/A|N/A|_True_  |
-
-|19.|The program will also include an extension of the Vendor class, which will be a Client class, and contain all aspects of the Vendor class|N/A|N/A|_False_  |
-|20.|The program will display a list of clients each of which will have an order history|N/A|N/A|_False_  |
-|21.|The main splash page will present a total expenditures vs incoming funds|N/A|N/A|_False_  |
-
-|3.|  |N/A|N/A|_False_  |
-
-|3.|  |  |  |_False_  |
-
-|3.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
+|13.|Order objects contain a list of all instantiated order objects|N/A|N/A|_True_|
+|14.|The program will be able to find a Vendor object via its Id|N/A|N/A|_True_  |
+|15.|The program will be able to find an Order object via its id|N/A|N/A|_True_  |
+|16.|The program will be able to edit a Vendor objects values|Update Vendor Name: Charles Barkley|New Name: Paul Rudd|_True_|
+|17.|The program will be able to update an Order objects values|Update Price: $15.00|New Price: $26.00|_True_|
+|18.|The program will be able to delete Vendor objects|Delete Vendor: Alex Trebeck|Alex Trebeck Deleted|_True_|
+|19.|The program will be able to delete Order objects|Delete Order|Order Deleted|_True_  |
+|20.|The program can remove an Order from a Vendor list  |N/A|N/A|_True_  |
+|21.|The program will display a list of clients each of which will have an order history|N/A|N/A|_True_  |
+|22.|The program will also include an extension of the Vendor class, which will be a Client class, and contain all aspects of the Vendor class|N/A|N/A|_False_  |
+|23.|The main splash page will present a total expenditures vs incoming funds|N/A|N/A|_False_  |
 
 ## Setup/Installation Requirements
 
@@ -62,7 +50,7 @@ _Long description._
 
 ## Known Bugs
 
-_There are currently no known bugs._
+_Periodically the FindVendor() static method is not finding the correct vendor as intended. Originally I was having this method return null, but this was causing too many errors. Instead, it returns the most recently made non-deleted vendor. Additionally this program has not been styled, and not all stretch goals were accomplished. Additionally, Bootstrap seems to not be applying all html class title css stylings as expected (e.g., the vendor delete buttons are supposed to be red [class="btn-alert"]). Due to time constraints I have also not fully mapped out all user interface paths, to ensure that every desired/expected path is included on each page._
 
 ## Support and contact details
 
@@ -70,8 +58,7 @@ _If you would like to contribute to this project, report any bugs/issues, or jus
 
 ## Technologies Used
 
-- C#
-- .NET
+_This program utilizes dotnet core app 2.2, the Model View Controller web application structure, c#, HTML, MSTest, Razor, and RESTFUL api routing._
 
 ### License
 
